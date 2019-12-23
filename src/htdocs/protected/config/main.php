@@ -10,7 +10,10 @@ return array(
 	'name'=>'My Web Application',
 
 	// preloading 'log' component
-	'preload'=>array('log'),
+	'preload'=>array(
+		'log',
+		'debug',
+	),
 
 	// autoloading model and component classes
 	'import'=>array(
@@ -58,13 +61,21 @@ return array(
 			'errorAction'=>YII_DEBUG ? null : 'site/error',
 		),
 
+		'debug' => array(
+            'class' => 'ext.yii-debug-toolbar.YiiDebugToolbarRoute',
+		),
+		
 		'log'=>array(
 			'class'=>'CLogRouter',
 			'routes'=>array(
-				array(
+				[
 					'class'=>'CFileLogRoute',
 					'levels'=>'error, warning',
-				),
+				],
+				[
+					'class' => 'ext.yii-debug-toolbar.YiiDebugToolbarRoute',
+					'ipFilters'=>array('*'),	
+				]
 				// uncomment the following to show log messages on web pages
 				/*
 				array(

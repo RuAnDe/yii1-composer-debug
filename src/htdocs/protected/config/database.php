@@ -9,4 +9,6 @@ return array(
 	'username' => 'root',
 	'password' => 'qW1234',
 	'charset' => 'utf8',
+	'enableProfiling'=>true,
+	'enableParamLogging'=>true,
 );
