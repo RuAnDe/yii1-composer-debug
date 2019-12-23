@@ -12,7 +12,6 @@ return array(
 	// preloading 'log' component
 	'preload'=>array(
 		'log',
-		'debug',
 	),
 
 	// autoloading model and component classes
@@ -59,10 +58,6 @@ return array(
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>YII_DEBUG ? null : 'site/error',
-		),
-
-		'debug' => array(
-            'class' => 'ext.yii-debug-toolbar.YiiDebugToolbarRoute',
 		),
 		
 		'log'=>array(
