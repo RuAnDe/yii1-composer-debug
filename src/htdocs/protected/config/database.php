@@ -4,6 +4,7 @@
 return array(
 	//'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 	'connectionString' => 'mysql:host=db;dbname=rms',
+	'tablePrefix' => 'rms_',
 	'emulatePrepare' => true,
 	'username' => 'root',
 	'password' => 'qW1234',
